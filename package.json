@@ -1,5 +1,5 @@
 {
-  "name": "@local/dsh-weather-plugin",
+  "name": "@doiiarx/dsh-weather-plugin",
   "version": "0.2.0",
   "private": true,
   "type": "module",

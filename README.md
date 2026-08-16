@@ -26,7 +26,7 @@ Persistent DeepSeek Harness bundle wrapping the wttr.in weather API.
 复制下面的指令块给你的 DSH agent，它会自动完成安装：
 
 ```text
-请安装 weather 插件（@local/dsh-weather-plugin）：
+请安装 weather 插件（@doiiarx/dsh-weather-plugin）：
 
 1. 前置：本机已有 deepseek-harness 源码（本插件 link 依赖其中的 dsh-tools 包，
    位于 <deepseek-harness>/packages/core/tools）。
@@ -37,8 +37,8 @@ Persistent DeepSeek Harness bundle wrapping the wttr.in weather API.
    （如果 package.json 里 dsh-tools 的 link 路径与你机器不符，改成你的
    deepseek-harness 实际路径后再装。）
 4. 挂进 web profile：编辑 $HOME/.dsh/profiles/web/package.json，
-   在 dependencies 加 "@local/dsh-weather-plugin": "link:<本插件目录绝对路径>"，
-   在 dsh.profile.bundles 加 "@local/dsh-weather-plugin"。
+   在 dependencies 加 "@doiiarx/dsh-weather-plugin": "link:<本插件目录绝对路径>"，
+   在 dsh.profile.bundles 加 "@doiiarx/dsh-weather-plugin"。
 5. 在 profile 目录执行 pnpm install。
 6. 暴露设置页：在 <deepseek-harness>/packages/host/apiproxy/src/api-proxy.ts
    的 WEB_SETTINGS_NAMESPACES 数组加 "local-weather"。
