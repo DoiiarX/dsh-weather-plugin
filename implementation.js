@@ -55,7 +55,7 @@ export function applyWeather(ctx, config = {}, report = () => {}) {
       const parsed = JSON.parse(text)
       if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) history = parsed
     } catch (error) {
-      console.error('[pn-weather] load history failed', error instanceof Error ? error.message : String(error))
+      console.error('[dsh-weather] load history failed', error instanceof Error ? error.message : String(error))
     }
   }
 
@@ -65,7 +65,7 @@ export function applyWeather(ctx, config = {}, report = () => {}) {
       const target = await fsSvc.resolve(historyFile)
       await fsSvc.writeText(target, JSON.stringify(history, null, 2))
     } catch (error) {
-      console.error('[pn-weather] save history failed', error instanceof Error ? error.message : String(error))
+      console.error('[dsh-weather] save history failed', error instanceof Error ? error.message : String(error))
     }
   }
 
